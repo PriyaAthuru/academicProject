@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>UHCL Job Opportunities</title>
+        <link href="teamprojectCSS.css" rel="stylesheet"></link> 
+    </h:head>
+ <h:body>
+     <h:form>
+         <div id="header">
+             <h1>Welcome to UHCL Employment Opportunities</h1>
+             <h3>Please select your Options</h3>
+                        <h:link outcome="newAccount.xhtml" >
+                    Register for a new Account
+                </h:link> 
+        <br></br>
+                <h:link outcome="login.xhtml">
+                    Login
+                </h:link>
+        </div>
+            <div id ="jobdisplay" >
+            <h1>Jobs available</h1>
+            <p>
+          <h:dataTable 
+              rows="#{jobsDisplay.showJobs().size()}"
+              value="#{jobsDisplay.showJobs()}" var="str" border="1">  
+                <h:column>  
+                    <f:facet name="header">
+            Job ID
+            </f:facet>
+                     #{str.jobID}
+                </h:column>
+                <h:column>  
+                  <f:facet name="header">
+            Title
+            </f:facet>                  
+                  #{str.jobtitle}
+                </h:column>
+              <h:column>  
+                <f:facet name="header">
+            Position
+            </f:facet>
+                #{str.jobpos}  
+                </h:column>
+             <h:column>  
+                 <f:facet name="header">
+            Job Description
+            </f:facet>
+               #{str.jobDes} 
+                </h:column>
+            
+            </h:dataTable>
+            </p>
+            </div>
+        </h:form>
+    </h:body>    
+</html>
+

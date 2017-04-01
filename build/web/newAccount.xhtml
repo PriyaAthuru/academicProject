@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Create a New Account</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+        <link href="teamprojectCSS.css" rel="stylesheet"></link>
+    </h:head>
+    <body>
+    <h:form id="openjoblistform">
+            <h3>Create a UHCL Account!</h3>
+            <p id="RType">
+             <p>Please enter Type HR or Stu<br></br>
+               <h:inputText
+                   id="userType" required ="true"
+                   requiredMessage="The User Type cannot be empty"
+                    title="Enter Type"
+                    value="#{newAccountCreation.userType}">
+               </h:inputText>
+            </p>
+            </p>
+            <p id="RUID">
+            <p>Please enter your ID<br></br>
+                <h:inputText id="UID" required ="true" 
+                             requiredMessage="The SSN field cannot be empty"
+                        title="Please enter your ID"
+                        value="#{newAccountCreation.UID}">
+                </h:inputText>
+            </p>
+            </p>
+            <p id="Rpaswd">
+             <p>Please enter password<br></br>
+               <h:inputText
+                   id="pwd" required ="true" 
+                    title="Enter password"
+                    value="#{newAccountCreation.pwd}">
+               </h:inputText>
+            </p>
+            </p>
+            <p id="RFname">
+            <p>Please enter your first Name<br></br>
+               <h:inputText
+                   id="firstName" required ="false" 
+                    title="Enter First Name"
+                    value="#{newAccountCreation.firstName}">
+               </h:inputText>
+            </p>
+                </p>
+            <p>
+                <h:commandButton id="submit" value="Submit"
+                                 action="accCreationConf.xhtml" />
+                &nbsp;&nbsp;
+               <h:link value="Return" outcome="index.xhtml" />
+            </p>
+     </h:form>
+        </body>
+</html>
+

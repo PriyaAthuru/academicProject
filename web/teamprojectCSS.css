@@ -1,0 +1,593 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 27, 2015, 9:15:16 PM
+    Author     : Priyamvada
+*/
+*{
+    font-family: Trebuchet MS, Helvetica, Sans-Serif;    
+}
+html {
+    background-color: lightgray;
+}
+a:hover {
+    color: hotpink;
+}
+#header
+{
+ padding-top: 230px;
+ padding-left: 20px;
+ font-style:  italic;
+ height: 80px;
+ width: 1024px;
+ top: 200px;
+ text-align:  center;
+ left: 900px;
+ font-size: 16px;
+ color: green;
+}
+body{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#jobdisplay
+{
+// padding-left: 100px;
+ height: 300px;
+ width: 1024px;
+ top: 250px;
+ text-align: justify;
+ left: 1000px;
+ font-size: 16px;
+ color: blue;
+}
+#jobtable
+{
+ height: 300px;
+ width: 1024px;
+ top: 25px;
+ text-align: justify;
+ left: 1000px;
+ font-size: 16px;
+ color: blue;  
+}
+#logincss
+{
+ padding-top: 200px;
+ padding-left: 10px;
+ font-style:  italic;
+ height: 110px;
+ width: 1024px;
+ top: 200px;
+ text-align:  justify;
+ left: 900px;
+ font-size: 16px;
+ color: green;   
+}
+#RegisterCSS
+{
+ padding-top: 200px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 110px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 16px;
+ color: green;   
+}
+/* .Sbutton{
+    background-color: #4CAF50; /* Green */
+ /*   border: none;
+    color: palegreen;
+    text-align: center;
+    text-decoration: #008000;
+    display: inline-block;
+    font-size: 16px;
+}
+#Vbutton
+{
+    background-color: #4CAF50; /* Green */
+ /*   border: none;
+    color: palegreen;
+    text-align: center;
+    text-decoration: #008000;
+    display: inline-block;
+    font-size: 16px;   
+} */
+#formbody
+{
+ background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#Registerbody
+{
+ background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+/* #Lid
+{
+	background-color : #99FFCC;
+	border: 1px solid #008000;
+	width: 230px;
+}
+#paswd
+{
+    	background-color : #99FFCC;
+	border: 1px solid #008000;
+	width: 230px;
+}
+#RType
+{
+ 	background-color : #99FFCC;
+	border: 1px solid #008000;
+	width: 230px;   
+}
+#RUID
+{
+  	background-color : #99FFCC;
+	border: 1px solid #008000;
+	width: 230px;   
+}
+#Rpaswd
+{
+	background-color : #99FFCC;
+	border: 1px solid #008000;
+	width: 230px;    
+}
+#RFname
+{
+	background-color : #99FFCC;
+	border: 1px solid #008000;
+	width: 230px;    
+} */
+#welcomeform 
+{
+ padding-top: 200px;
+ padding-left: 100px;
+ font-style:  italic;
+/* height: 700px;
+ width: 1000px;*/
+// top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 16px;
+ color: green;   
+}
+ welcomebody{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+} 
+ jobtable
+{
+/* height: 100px;
+ width: 1024px;*/
+ top: 20px;
+ text-align: justify;
+ left: 1000px;
+ font-size: 16px;
+ color: blue;    
+} 
+#Vbutton
+{
+padding-top: 10px;
+}
+#accsucc
+{
+ height: 100px;
+}
+#accbody{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#HRlogin
+{
+ padding-top: 0px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2000px;
+ width: 1024px;
+// top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 16px;
+ color: green;     
+}
+#HRbody
+{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#apptable
+{
+ padding-top: 100px;
+ height: 300px;
+ width: 1024px;
+ top: 25px;
+ text-align: justify;
+ left: 1000px;
+ font-size: 16px;
+ color: blue;   
+}
+#appformbody
+{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#appheading
+{
+ padding-top: 20px;
+ padding-left: 20px;
+ font-style:  italic;
+// height: 10px;
+ width: 1024px;
+// top: 200px;
+ text-align: left;
+ left: 500px;
+ font-size: 16px;
+ color: blue;   
+}
+#appform
+{
+ padding-top: 128px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 16px;
+ color: green;   
+}
+#withdrawm
+{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;  
+}
+#withdrawform{
+ padding-top: 150px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;   
+}
+#appliedjobsb
+{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;      
+}
+#appliedjobsform
+{
+ padding-top: 128px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 16px;
+ color: green;     
+}
+#appliedjobstable
+{
+ padding-top: 100px;
+ height: 300px;
+ width: 1024px;
+ top: 25px;
+ text-align: justify;
+ left: 1000px;
+ font-size: 16px;
+ color: blue;   
+}
+#apppliedjobsheading
+{
+ padding-top: 20px;
+ padding-left: 20px;
+ font-style:  italic;
+// height: 10px;
+ width: 1024px;
+// top: 200px;
+ text-align: left;
+ left: 500px;
+ font-size: 16px;
+ color: blue;    
+}
+#appsuccessbody
+{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#appsuccessform{
+ padding-top: 150px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;   
+}
+#applistbody
+{
+ background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#applistform
+{
+ padding-top: 50px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;   
+}
+#applistheading
+{
+ padding-top: 20px;
+ padding-left: 20px;
+ font-style:  italic;
+// height: 10px;
+ width: 1024px;
+// top: 200px;
+ text-align: left;
+ left: 500px;
+ font-size: 16px;
+ color: blue;    
+}
+#joblisttable
+{
+// padding-top: 10px;
+ height: 300px;
+ width: 1024px;
+ top: 25px;
+ text-align: justify;
+ left: 1000px;
+ font-size: 16px;
+ color: blue;    
+}
+#postconbody
+{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;    
+}
+#postconform{
+ padding-top: 160px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;   
+}
+#loginnotsuc
+{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;     
+}
+#loginnotform{
+ padding-top: 200px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;   
+}
+#HRindexbody
+{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#HRindexform
+{
+padding-top: 200px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;    
+}
+#NSbody
+{
+ background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#NSform
+{
+padding-top: 200px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;    
+}
+#notbody
+{
+ background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;     
+}
+#notform
+{
+padding-top: 200px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;      
+}
+#statupbody{
+   background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#statupform
+{
+padding-top: 200px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;     
+}
+#wdnbody{
+   background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#wdnform
+{
+padding-top: 200px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2500px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;    
+}
+#openjoblistbody
+{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;
+}
+#openjoblistform
+{
+padding-top: 200px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2800px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;   
+}
+#Rbutton
+{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#postnewbody
+{
+background: url('Hawks.jpg');
+ background-size: 1800px;
+ background-repeat: no-repeat;
+ height: 800px;
+ width: 1330px;   
+}
+#postnewform
+{
+padding-top: 200px;
+ padding-left: 100px;
+ font-style:  italic;
+ height: 2800px;
+ width: 1024px;
+ top: 200px;
+ text-align: left;
+ left: 900px;
+ font-size: 20px;
+ color: green;   
+}

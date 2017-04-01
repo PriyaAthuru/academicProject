@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Job Application</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+        <link href="teamprojectCSS.css" rel="stylesheet"></link>
+    </h:head>
+    <h:body>
+    <h:form id="openjoblistform">
+        <p>
+            <h3>Here is your application form!!</h3>
+            <h3>Enter your Name</h3>                
+               <h:inputText
+                   id="FullName" required ="true"
+                   requiredMessage="Name cannot be empty"
+                    title="Enter Name"
+                    value="#{applicationForm.appFullName}">
+               </h:inputText>
+            </p>
+            <p>Please enter your Age<br></br>
+                <h:inputText id="Appage" required ="true" 
+                             requiredMessage="Please enter your age"
+                        title="Please enter your ID"
+                        value="#{applicationForm.appAge}">
+                </h:inputText>
+            </p>
+             <p>Please enter your phone number<br></br>
+               <h:inputText
+                   id="AppPhone" required ="true" 
+                    title="Please enter your contact number"
+                    value="#{applicationForm.appPhone}">
+               </h:inputText>
+            </p>
+            <p>Please enter your EMail ID<br></br>
+               <h:inputText
+                   id="EmailID" required ="false" 
+                    title="Enter EmailID"
+                    value="#{applicationForm.contactEmail}">
+               </h:inputText>
+            </p>
+                    <p>Please Enter your Education<br></br>
+               <h:inputText
+                   id="Education" required ="false" 
+                    title="Enter Education"
+                    value="#{applicationForm.REducation}">
+               </h:inputText>
+            </p>
+                    <p>Please enter your Experience<br></br>
+               <h:inputText
+                   id="Experience" required ="false" 
+                    title="Enter Experience"
+                    value="#{applicationForm.experience}">
+               </h:inputText>
+            </p>
+                <h:commandButton id="submit" value="SubmitApplication"
+                                 action="#{applicationForm.applicationDetails()}" />
+                 <h:link outcome="welcome.xhtml" >
+                    Return
+                </h:link> 
+     </h:form>
+        </h:body>
+</html>
+

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+ <head>
+        <title>HR View</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="teamprojectCSS.css" rel="stylesheet"></link>
+    </head>
+    <h:body id="openjoblistbody">
+        <h:form id="openjoblistform">
+            <p>
+                <h3> Welcome #{logIn.nlogin.userName} to UHCL Job Portal! (HR View)</h3>
+                <h3>Closed Jobs list:</h3>
+                #{logIn.createClosedJobsList()}
+            </p>
+            <h:dataTable 
+                         rows="#{logIn.jobsClosedList.size()}"
+                         value="#{logIn.jobsClosedList}" var="job"
+                         border="1">
+                <h:column>
+                    <f:facet name="header">Title</f:facet>
+                    
+                    <h:outputText value="#{job.jobTitle}"></h:outputText>
+                    
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">Description</f:facet>
+                    <h:outputText value="#{job.jobdesc}"></h:outputText>
+                    
+                </h:column>
+
+<!--                <h:column>
+                    <f:facet name="header">Open Date</f:facet>
+                    <h:outputText value="#{job.dateOpen}"></h:outputText>
+                </h:column>-->
+                
+                <h:column>
+                    <f:facet name="header">Positions</f:facet>
+                    <h:outputText value="#{job.postions}"></h:outputText>
+                    
+                </h:column>
+                
+                 <h:column>
+                    <f:facet name="header">Job Status</f:facet>
+                    
+                    <h:outputText value="Closed"></h:outputText>
+                     
+<!--                    <h:link value="View Details"  outcome="jobapplicationlist.xhtml">
+                    <f:param name="jobt" value="#{job.jobTitle}"></f:param>
+                    <f:param name="jobd" value="#{job.jobdesc}"></f:param>
+                    <f:param name="jobdate" value="#{job.dateOpen}"></f:param>
+                    <f:param name="jobpo" value="#{job.postions}"></f:param>
+                    <f:param name="jobid" value="#{job.id}"></f:param>
+                    
+                    </h:link>-->
+                     
+                </h:column>
+            </h:dataTable>
+            <p>
+            <h:link value="Return" outcome="managerIndex.xhtml" /> &nbsp; &nbsp;
+            <div id="Vbutton">
+           
+<!--            <h:commandButton id="postjob" value="Post New Job" action="postnewjob.xhtml">
+               
+            </h:commandButton>-->
+            </div>
+            </p>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Here are the jobs you have applied</title>
+         <link href="teamprojectCSS.css" rel="stylesheet"></link>
+    </h:head>
+    <h:body>
+        <h:form id="openjoblistform">
+            <h3> Viewing your Applications</h3>
+               
+        <h3>Here are the Details</h3>
+        <h:dataTable
+            rows="#{appliedDetails.jobsapplied().size()}"
+            value="#{appliedDetails.jobsapplied()}" var="aj" border="1">
+               <h:column>  
+                    <f:facet name="header">
+            Job_ID
+            </f:facet>
+                     #{aj.job_ID}
+                </h:column>
+            <br></br>
+                          <h:column>  
+                    <f:facet name="header">
+            Job Title
+            </f:facet>
+                     #{aj.appjob}
+                </h:column>
+            <br></br>
+                <h:column>  
+                  <f:facet name="header">
+            Application ID
+            </f:facet>                  
+                  #{aj.application_ID}
+                </h:column>
+            <br></br>
+            <h:column>  
+            <f:facet name="header">
+           Status
+            </f:facet>
+                #{aj.applicationStatus}  
+            </h:column>
+            <br></br>
+            <h:column>
+            <h:commandButton id="xxx" value="Withdraw"
+                             action="#{appliedDetails.appliedDetails(logIn.nlogin.userId,aj.job_ID)}">
+            </h:commandButton>
+            </h:column>
+            </h:dataTable> 
+                <br></br>
+                            <h:commandButton id="return" value="Return"
+                             action="welcome.xhtml">
+            </h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+

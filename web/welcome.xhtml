@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Welcome</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="teamprojectCSS.css" rel="stylesheet"></link>    
+    </h:head>
+    <h:body id="openjoblistbody">      
+        <h:form id="openjoblistform">
+            <p>Welcome #{logIn.nlogin.userName}</p>
+            <br></br>
+            <p>Here are the List of Jobs available!!!!!</p>
+            <h:dataTable
+                rows="#{jobsDisplay.showJobs().size()}"
+                value="#{jobsDisplay.showJobs()}" var="str" border="1">
+                <h:column>  
+                    <f:facet name="header">
+                        Job ID
+                    </f:facet>
+                    #{str.jobID}
+                </h:column>
+                <h:column>  
+                    <f:facet name="header">
+                        Title
+                    </f:facet>                  
+                    #{str.jobtitle}
+                </h:column>
+                <h:column>  
+                    <f:facet name="header">
+                        Position
+                    </f:facet>
+                    #{str.jobpos}  
+                </h:column>
+                <h:column>  
+                    <f:facet name="header">
+                        Job Description
+                    </f:facet>
+                    #{str.jobDes} 
+                </h:column>
+                <h:column>
+
+                    <h:commandButton id="submit" value="Apply"
+                                     action="#{applicationForm.applicationForm(logIn.nlogin.userId,str.jobID)}"/>          
+                </h:column>
+            </h:dataTable> 
+            
+            <p id="Vbutton">
+                <p>Click view jobs to view jobs applied</p>
+                <h:commandButton id="ViewJobs" value="ViewJobs"
+                                 action="#{appliedDetails.appliedJobs(logIn.nlogin.userId)}"/>
+                &nbsp;&nbsp;&nbsp;
+                <h:commandButton id="logout" value="Logout"
+                                 action="index.xhtml"/>
+            </p>
+        </h:form>
+    </h:body>
+</html>
+

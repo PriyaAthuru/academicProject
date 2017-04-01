@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Applications List</title>
+        <link href="teamprojectCSS.css" rel="stylesheet"></link>
+    </h:head>
+    <h:body>            
+        <h:form id="openjoblistform">
+            <h3> Welcome #{logIn.nlogin.userName} to UHCL Job Portal! (HR View)</h3>
+            <h3>Applications list:</h3>  
+            #{logIn.createApplicationList(param.jobid)}
+            <p>
+                <h3>Job Title: #{logIn.selectedJob.jobTitle}</h3>
+            </p>
+            <p>
+                <h3>Job Description: #{logIn.selectedJob.jobdesc}</h3>
+            </p>
+            <p>
+                <h3>Job Positions: #{logIn.selectedJob.postions}</h3>
+            </p>
+            <p>
+                <h3>Number of Applications: #{logIn.applicationList.size()}</h3>
+            </p>
+            <p>
+                <h:commandButton id="notifiction" value="Send Notification" action="notificationconfirmation.xhtml">
+
+            
+            </h:commandButton>
+                </p>
+            <h:dataTable id="openjobslist"
+                         rows="#{logIn.applicationList.size()}"
+                         value="#{logIn.applicationList}" var="app"
+                         border="1">
+                <h:column>
+                    <f:facet name="header">Application ID</f:facet> 
+                    <h:outputText value="#{app.applicationId}"></h:outputText>                               
+
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Job ID</f:facet>
+                    <h:outputText value="#{app.jobId}"></h:outputText>
+
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">User ID</f:facet>
+                    <h:outputText value="#{app.userId}"></h:outputText>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">App Status</f:facet>
+                    <h:outputText value="#{app.appStatus}"></h:outputText>
+
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Select</f:facet>
+                    <h:link value="View Details"  outcome="applicationDetails.xhtml" >
+                        <f:param name="appid" value="#{app.applicationId}"></f:param>
+                        <f:param name="jobid" value="#{app.jobId}"></f:param>
+                        <f:param name="userid" value="#{app.userId}}"></f:param>
+                        <f:param name="appstatus" value="#{app.appStatus}"></f:param>
+
+                    </h:link> 
+
+                </h:column>
+            </h:dataTable>
+            <div id="Vbutton">
+                <h:link value="Return" outcome="openjobslist.xhtml" />
+            </div>
+        </h:form>
+    </h:body>
+</html>
+

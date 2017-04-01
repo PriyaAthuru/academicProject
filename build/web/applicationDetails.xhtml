@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+ <h:head>
+        <title>Application Details</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+        <link href="teamprojectCSS.css" rel="stylesheet"></link>
+    </h:head>
+    <h:body>
+        <h:form id="openjoblistform">
+            <h3> Welcome #{logIn.nlogin.userName} to UHCL Job Portal! (HR View)</h3>
+                <h3>Application Details:</h3>
+              #{logIn.getSelectedAppDetails(param.appid)}           
+            <h:dataTable 
+                rows="1"
+                value="#{logIn.selectedApp}" var="appl">
+                <h:column>
+
+                    <p>Application Id:
+                        <h:outputText value="#{appl.applicationId}"></h:outputText>
+                    </p>
+
+                    <p>User Id:
+                        <h:outputText value="#{appl.userId}"></h:outputText>
+                    </p>
+                    <p>Job Id:
+                        <h:outputText value="#{appl.jobId}"></h:outputText>
+                    </p>
+                    <p>Application Status:
+                        <h:outputText value="#{appl.appStatus}"></h:outputText>
+                    </p>
+                    <p>User Name:
+                        <h:outputText value="#{appl.uname}"></h:outputText>
+                    </p>
+                    <p>Age:
+                        <h:outputText value="#{appl.age}"></h:outputText>
+                    </p>
+                    <p>Phone:
+                        <h:outputText value="#{appl.phone}"></h:outputText>
+                    </p>
+                    <p>Email:
+                        <h:outputText value="#{appl.email}"></h:outputText>
+                    </p>
+                </h:column>
+
+
+
+            </h:dataTable>
+
+
+            #{logIn.setStatusArray()}
+            <h:selectOneRadio value="#{logIn.newAppStatus}" id="status" required="true" >
+                <f:selectItems value="#{logIn.appStausArr}" var="c"
+                               itemLabel="#{c}" itemValue="#{c}" />               
+            </h:selectOneRadio>
+
+            <h:link value="Return" outcome="jobapplicationlist.xhtml" />
+            &nbsp; &nbsp;
+            <h:commandButton id="update" value="update" action="statusupdateconfirmation.xhtml">
+
+            </h:commandButton>
+        </h:form>
+
+    </h:body>
+</html>
+
